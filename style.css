@@ -9,9 +9,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
+  background-image: url("MON IMAGE .avif");
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--texte);
   line-height: 1.6;
+  
 }
 
 a { text-decoration: none; color: inherit; }
@@ -125,14 +127,13 @@ h1, h2, h3 { line-height: 1.2; }
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
-  transition: transform 0.3s;
   background-size: cover;
   background-position: center;
 }
 .categorie:hover { transform: scale(1.02); }
-.cat-femme { background-image: linear-gradient(to top, rgba(0,0,0,0.5), transparent), linear-gradient(135deg, #d9a5a0, #8e5a6a); }
-.cat-homme { background-image: linear-gradient(to top, rgba(0,0,0,0.5), transparent), linear-gradient(135deg, #6b8ba4, #2f4858); }
-.cat-acc   { background-image: linear-gradient(to top, rgba(0,0,0,0.5), transparent), linear-gradient(135deg, #c9b27c, #7a6a3a); }
+.cat-femme { background-image:linear-gradient(to top, rgba(0,0,0,0.5), transparent),url("Vetement  femmes .webp");background-size: cover;background-position: center;}
+.cat-homme { background-image: linear-gradient(to top, rgba(0,0,0,0.5), transparent), url("HOMME.jpg");background-size: cover;background-position: center; }
+.cat-acc   { background-image: linear-gradient(to top, rgba(0,0,0,0.5), transparent), url("ACCESSOIRES.jpg");background-size: cover;background-position: center;}
 
 /* ===== Produits ===== */
 .produit {
