@@ -227,4 +227,31 @@ h1, h2, h3 { line-height: 1.2; }
   .menu { flex-wrap: wrap; justify-content: center; gap: 15px; }
   .hero h1 { font-size: 2.3rem; }
   .hero { min-height: 65vh; }
+  
+}
+.titre-accessoires {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.titre-femmes {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.titre-hommes {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.video-promo {
+    width: 100%;
+    padding: 0;
+}
+
+.video-promo video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    display: block;
 }
