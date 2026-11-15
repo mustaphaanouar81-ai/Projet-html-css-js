@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Collection Femme</title>
+<title>Collection Homme</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
   body{background:#f9f5f0;color:#222}
@@ -22,13 +22,30 @@
   @media(max-width:1100px){.grille{grid-template-columns:repeat(2,1fr)} .carte img{height:480px}}
   @media(max-width:600px){.grille{grid-template-columns:1fr} .carte img{height:460px}}
 </style>
+<link rel="stylesheet" href="ui.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header><b>HANSWEAR</b></header>
+<header class="entete-boutique">
+  <a href="index.html"><b>HANSWEAR</b></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="femme.html">Femme</a>
+    <a href="homme.html">Homme</a>
+    <a href="accessoires.html">Accessoires</a>
+    <a href="promotion.html">Promotions</a>
+  </nav>
+  <a href="#" class="panier">Panier (0)</a>
+</header>
 
 <h1>Collection Hommes</h1>
 <p>Nouvelle collection 2026</p>
+
+<div class="recherche">
+  <input type="search" id="recherche" aria-label="Rechercher un article" placeholder="Rechercher un article...">
+</div>
+<p id="aucun-resultat" hidden>Aucun article trouvé.</p>
 
 <div class="grille">
 
@@ -37,7 +54,7 @@
     <div class="info">
       <h3>VESTE VIETNAMIEN </h3>
       <div class="prix">524,99 € </div>
-      <button class="btn" onclick="payer('VESTE VIETNAMIEN - 524,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -46,7 +63,7 @@
     <div class="info">
       <h3>COSTUME HOMME CANADA</h3>
       <div class="prix">689,99 €</div>
-      <button class="btn" onclick="payer('veste-pantalon-gilet-costume-homme-costume CANADA - 689,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -55,7 +72,7 @@
     <div class="info">
       <h3>COSTUMES NOIRES LV </h3>
       <div class="prix">535,99 €</div>
-      <button class="btn" onclick="payer('COSTUMES EN PEAU DE CROCODILE - 535,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -64,17 +81,12 @@
     <div class="info">
       <h3>COSTUME FRANCAIS BLANC </h3>
       <div class="prix">892,50 € </div>
-      <button class="btn" onclick="payer('COSTUME FRANCAIS BLANC - 892,50 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
 </div>
 
-<script>
-function payer(article){
-  alert("Tu as choisi : " + article + "\n\nRedirection vers le paiement...");
-}
-</script>
 
 </body>
 </html>

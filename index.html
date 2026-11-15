@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HANS wear votre boutique de luxe en ligne </title>
+  <meta name="description" content="Nova Wear : vêtements homme, femme et accessoires. Nouvelle collection, livraison rapide et retours gratuits.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ui.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Bandeau d'annonce -->
+  <div class="annonce">Pour tout achat d'un produit , recevez  des points XP </div>
+
+  <!-- En-tête -->
+  <header class="header">
+    <a href="index.html" class="logo">HANS<span>WEAR</span></a>
+    <button type="button" class="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="actif">Accueil</a></li>
+        <li><a href="femme.html">Femme</a></li>
+        <li><a href="homme.html">Homme</a></li>
+        <li><a href="accessoires.html">Accessoires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+    
+      <a href="#" class="panier">Panier (0)</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Bannière principale -->
+    <section class="hero">
+      <!-- VIDEO EN FOND - C'EST ICI QUE TU LA METS -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="M&S Mens Style The Art of Tailoring - TV AD 2016.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-texte">
+        <p class="sur-titre">VETEMENTS DE LUXE HOMMES ET FEMMES  </p>
+        <h1>Le style qui vous ressemble</h1>
+        <p>Chaque détail compte, chaque tenue raconte une histoire</p>
+        <div class="hero-boutons">
+          <a href="promotion.html" class="btn btn-clair">Voir les promos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="avantages">
+      <div class="avantage">
+        <h3>Livraison rapide</h3>
+        <p>Expédition sous 24 h</p>
+      </div>
+      <div class="avantage">
+        <h3>Retours gratuits</h3>
+        <p>Sous 30 jours</p>
+      </div>
+      <div class="avantage">
+        <h3>Service client</h3>
+        <p>Du lundi au samedi</p>
+      </div>
+    </section>
+
+    <!-- Catégories -->
+    <section id="categories" class="section">
+      <h2>Nos catégories</h2>
+      <div class="grille grille-3">
+        <a href="femme.html" class="categorie cat-femme"><span>Femmes</span></a>
+        <a href="homme.html" class="categorie cat-homme"><span>Hommes</span></a>
+        <a href="accessoires.html" class="categorie cat-acc"><span>Accessoires</span></a>
+      </div>
+    </section>
+
+    <!-- Nouveautés -->
+    <section class="video-promo">
+
+    <video autoplay muted loop controls>
+
+        <source src="M&S Womens Fashion The New Autumn Season AW16 TV Ad.mp4" type="video/mp4"> </video>
+
+</section>
+
+    <!-- Promotion -->
+    <section id="promos" class="promo">
+      <h2>-30 % sur la sélection d'hiver</h2>
+      <p>Jusqu'au 30 novembre, profitez de prix réduits sur des centaines d'articles.</p>
+      <p id="compte-rebours" class="compte-rebours"></p>
+      <a href="#" class="btn btn-clair">J'en profite</a>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+      <h2>Restez informé(e)</h2>
+      <p>Inscrivez-vous à la newsletter et recevez 10 % de réduction sur votre première commande.</p>
+      <form action="#" method="post" class="form-news">
+        <label for="email" class="cache">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+        <button type="submit" class="btn">S'inscrire</button>
+      </form>
+      <p id="msg-news" class="msg" role="status"></p>
+    </section>
+
+  </main>
+
+  <!-- Pied de page -->
+  <footer id="contact" class="footer">
+    <div class="footer-col">
+      <h4>HANS<span>WEAR</span></h4>
+      <p>TOUT RETOUR ACCEPTABLE POUR UN DELAI DE MOINS DE 5 JOURS <br> MERCI D'AVOIR FAIS CONFIANCE A NOTRE BOUTIQUE </p>
+    </div>
+    <div class="footer-col">
+      <h4>Boutique</h4>
+      <ul>
+        <li><a href="femme.html">Femme</a></li>
+        <li><a href="homme.html">Homme</a></li>
+        <li><a href="accessoires.html">Accessoires</a></li>
+        <li><a href="#">Promotions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Aide</h4>
+      <ul>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>contact@hanswear.fr</p>
+      <p>Lun – Sam : 9 h – 18 h</p>
+      <p>+33746495564</p>
+    </div>
+    <p class="copyright">© 2026 Hans Wear – Tous droits réservés · Mentions légales · CGV</p>
+  </footer>
+  
+
+</body>
+</html>

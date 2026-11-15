@@ -22,10 +22,22 @@
   @media(max-width:1100px){.grille{grid-template-columns:repeat(2,1fr)} .carte img{height:480px}}
   @media(max-width:600px){.grille{grid-template-columns:1fr} .carte img{height:460px}}
 </style>
+<link rel="stylesheet" href="ui.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header><b>HANSWEAR</b></header>
+<header class="entete-boutique">
+  <a href="index.html"><b>HANSWEAR</b></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="femme.html">Femme</a>
+    <a href="homme.html">Homme</a>
+    <a href="accessoires.html">Accessoires</a>
+    <a href="promotion.html">Promotions</a>
+  </nav>
+  <a href="#" class="panier">Panier (0)</a>
+</header>
 
 <h1>Collection Promotion</h1>
 <p>Nouvelle collection 2026</p>
@@ -37,7 +49,7 @@
     <div class="info">
       <h3>CHEMISE PULL</h3>
       <div class="prix">24,99 € <span>34,99 €</span></div>
-      <button class="btn" onclick="payer('CHEMISE PULL - 24,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -46,7 +58,7 @@
     <div class="info">
       <h3>CHEMISE VELOUX</h3>
       <div class="prix">29,99 € <span>39,99 €</span></div>
-      <button class="btn" onclick="payer('CHEMISE VELOUX - 29,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -55,7 +67,7 @@
     <div class="info">
       <h3>PULL NOIRE</h3>
       <div class="prix">19,99 €</div>
-      <button class="btn" onclick="payer('Ensemble 2 Pièces - 19,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -64,17 +76,12 @@
     <div class="info">
       <h3>PULL BALENCIAGA</h3>
       <div class="prix">32,50 € <span>45,00 €</span></div>
-      <button class="btn" onclick="payer('PULL BALENCIAGA - 32,50 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
 </div>
 
-<script>
-function payer(article){
-  alert("Tu as choisi : " + article + "\n\nRedirection vers le paiement...");
-}
-</script>
 
 </body>
 </html>

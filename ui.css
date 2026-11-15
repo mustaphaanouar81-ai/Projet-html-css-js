@@ -1,0 +1,110 @@
+/* ui.css - styles des fonctionnalites JavaScript (burger, panier, toast, etc.) */
+
+/* ----- Menu burger (accueil) ----- */
+.burger {
+  display: none;
+  background: none;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .js .burger { display: block; }
+  .js .header nav { display: none; }
+  .js .header nav.ouvert { display: block; flex-basis: 100%; order: 5; }
+  .js .header nav.ouvert .menu { flex-direction: column; align-items: center; }
+}
+
+/* ----- En-tete des pages produits ----- */
+.entete-boutique {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.entete-boutique a { color: #fff; text-decoration: none; }
+.entete-boutique a:hover { color: #f2b705; }
+.entete-boutique nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 16px; }
+
+/* ----- Message "ajoute au panier" ----- */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #111;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 200;
+}
+.toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ----- Recapitulatif du panier ----- */
+.panneau-panier {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: min(360px, calc(100vw - 40px));
+  max-height: 80vh;
+  overflow: auto;
+  background: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 150;
+}
+.pan-titre { font-size: 1.2rem; font-weight: bold; margin-bottom: 12px; }
+.pan-ligne { margin-bottom: 8px; font-size: 0.95rem; }
+.pan-total { font-weight: bold; font-size: 1.1rem; margin: 12px 0 8px; }
+.pan-boutons { display: flex; gap: 10px; margin-top: 15px; }
+.pan-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pan-btn:hover { background: #f2b705; color: #111; }
+
+/* ----- Messages du formulaire ----- */
+.msg { margin: 15px auto 0; max-width: 420px; border-radius: 6px; font-size: 0.95rem; }
+.msg-ok, .msg-erreur { padding: 10px 16px; }
+.msg-ok { background: #d9f2dd; color: #14532d; }
+.msg-erreur { background: #fde0dc; color: #7f1d1d; }
+
+/* ----- Compte a rebours ----- */
+.compte-rebours { font-weight: bold; font-size: 1.3rem; }
+
+/* ----- Apparition au defilement (seulement si le JS tourne) ----- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ----- Barre de recherche (pages produits) ----- */
+.recherche { text-align: center; margin-bottom: 35px; }
+.recherche input {
+  width: min(420px, 90%);
+  padding: 13px 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+}

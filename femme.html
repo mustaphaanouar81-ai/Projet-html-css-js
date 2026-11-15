@@ -22,13 +22,30 @@
   @media(max-width:1100px){.grille{grid-template-columns:repeat(2,1fr)} .carte img{height:480px}}
   @media(max-width:600px){.grille{grid-template-columns:1fr} .carte img{height:460px}}
 </style>
+<link rel="stylesheet" href="ui.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header><b>HANSWEAR</b></header>
+<header class="entete-boutique">
+  <a href="index.html"><b>HANSWEAR</b></a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="femme.html">Femme</a>
+    <a href="homme.html">Homme</a>
+    <a href="accessoires.html">Accessoires</a>
+    <a href="promotion.html">Promotions</a>
+  </nav>
+  <a href="#" class="panier">Panier (0)</a>
+</header>
 
 <h1>Collection Femme</h1>
 <p>Nouvelle collection 2026</p>
+
+<div class="recherche">
+  <input type="search" id="recherche" aria-label="Rechercher un article" placeholder="Rechercher un article...">
+</div>
+<p id="aucun-resultat" hidden>Aucun article trouvé.</p>
 
 <div class="grille">
 
@@ -37,7 +54,7 @@
     <div class="info">
       <h3>Robe Longue Wax Africaine GHANA </h3>
       <div class="prix">224,99 € </div>
-      <button class="btn" onclick="payer('Robe Longue Wax Africaine - 224,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -46,7 +63,7 @@
     <div class="info">
       <h3>Robe Soirée Élégante AFRICA</h3>
       <div class="prix">279,99 € </div>
-      <button class="btn" onclick="payer('Robe Soirée Élégante - 279,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -55,7 +72,7 @@
     <div class="info">
       <h3>Robe Soirée Élégante MODE </h3>
       <div class="prix">219,99 €</div>
-      <button class="btn" onclick="payer('Robe Soirée Élégante MODE - 219,99 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
@@ -64,17 +81,12 @@
     <div class="info">
       <h3>ROBE STYLE MANNEQUIN</h3>
       <div class="prix">192,50 € </div>
-      <button class="btn" onclick="payer('ROBE STYLE MANNEQUIN - 192,50 €')">Payer</button>
+      <button class="btn">Ajouter au panier</button>
     </div>
   </div>
 
 </div>
 
-<script>
-function payer(article){
-  alert("Tu as choisi : " + article + "\n\nRedirection vers le paiement...");
-}
-</script>
 
 </body>
 </html>
