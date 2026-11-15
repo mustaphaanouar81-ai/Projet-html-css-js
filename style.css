@@ -255,3 +255,35 @@ h1, h2, h3 { line-height: 1.2; }
     object-fit: cover;
     display: block;
 }
+/* VIDEO EN FOND DU HERO */
+.hero {
+  position: relative;
+  overflow: hidden;
+  /* garde ta couleur marron en secours si la vidéo ne charge pas */
+  background: #6b3a2e;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* la vidéo remplit tout le marron sans être déformée */
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* voile noir pour que ton texte reste lisible */
+  z-index: 1;
+}
+
+.hero-texte {
+  position: relative;
+  z-index: 2; /* ton texte passe AU-DESSUS de la vidéo */
+}

@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Collection homme</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection Femme</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+  body{background:#f9f5f0;color:#222}
+  header{background:#111;color:#fff;padding:20px 40px;font-size:18px}
+  h1{text-align:center;padding:35px 0 10px;font-size:38px}
+  p{text-align:center;color:#666;margin-bottom:35px;font-size:17px}
+  .grille{max-width:1450px;margin:0 auto;padding:0 25px 60px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .carte{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.1)}
+  .carte img{width:100%;height:520px;object-fit:cover;display:block}
+  .info{padding:18px;text-align:center}
+  .info h3{font-size:19px;margin-bottom:10px}
+  .prix{font-weight:bold;font-size:21px;color:#b12704;margin-bottom:14px}
+  .prix span{color:#999;text-decoration:line-through;font-size:14px;margin-left:6px}
+  .btn{width:100%;padding:14px;border:none;background:#111;color:#fff;border-radius:9px;cursor:pointer;font-size:16px}
+  .btn:hover{background:#f2b705;color:#111}
+  @media(max-width:1100px){.grille{grid-template-columns:repeat(2,1fr)} .carte img{height:480px}}
+  @media(max-width:600px){.grille{grid-template-columns:1fr} .carte img{height:460px}}
+</style>
 </head>
 <body>
 
-<h1 class="titre-hommes">COLLECTION HOMMES </h1>
+<header><b>MA BOUTIQUE</b></header>
 
-<a href="aceuill.html">Retour à l'accueil</a>
-<div class="produits">
+<h1>Collection Femme</h1>
+<p>Nouvelle collection 2026</p>
 
-    <div class="produit">
-        <img src="20201121151902.jpg" alt="FRANCE">
-        <h3>Smoking Prestige france <br> TAILLE XXL / XL / M</h3>
-        <p class="prix">1018,80 €</p>
+<div class="grille">
+
+  <div class="carte">
+    <img src="COSTUMES NOIRES .jpg" alt="Robe wax">
+    <div class="info">
+      <h3>Robe Longue Wax Africaine</h3>
+      <div class="prix">24,99 € <span>34,99 €</span></div>
+      <button class="btn" onclick="payer('Robe Longue Wax Africaine - 24,99 €')">Payer</button>
     </div>
+  </div>
 
-    <div class="produit">
-        <img src="OIP (1).webp" alt=" ESPAGNE">
-        <h3>Smoking Prestige espagne <br> TAILLE XXL / XL </h3>
-        <p class="prix">1028,37 €</p>
+  <div class="carte">
+    <img src="veste-pantalon-gilet-costume-homme-costume.webp" alt="Robe soirée">
+    <div class="info">
+      <h3>Robe Soirée Élégante</h3>
+      <div class="prix">29,99 € <span>39,99 €</span></div>
+      <button class="btn" onclick="payer('Robe Soirée Élégante - 29,99 €')">Payer</button>
     </div>
+  </div>
 
-    <div class="produit">
-        <img src="veste-pantalon-gilet-costume-homme-costume.webp" alt="ETATS UNIS ">
-        <h3>Smoking Prestige Etats unis <br> TAILLE XXL </h3>
-        <p class="prix">823,75 €</p>
+  <div class="carte">
+    <img src="costume-homme-coupe-regular-gris-anthracite-c2aido-f567-29-pz0d27127.1683215296.webp" alt="Ensemble">
+    <div class="info">
+      <h3>Ensemble 2 Pièces Nida Stretch</h3>
+      <div class="prix">19,99 €</div>
+      <button class="btn" onclick="payer('Ensemble 2 Pièces - 19,99 €')">Payer</button>
     </div>
+  </div>
 
-    <div class="produit">
-        <img src="costume-homme-marque-de-luxe-couleur-unie-ensemble.webp" alt="SUISSE">
-        <h3>Smoking Prestige suisse <br>  TAILLE XXL / XL / L / M</h3>
-        <p class="prix">721,92 €</p>
+  <div class="carte">
+    <img src="costume-homme-marque-de-luxe-couleur-unie-ensemble.webp" alt="Abaya">
+    <div class="info">
+      <h3>Abaya de Luxe à Paillettes</h3>
+      <div class="prix">32,50 € <span>45,00 €</span></div>
+      <button class="btn" onclick="payer('Abaya de Luxe - 32,50 €')">Payer</button>
     </div>
+  </div>
 
 </div>
+
+<script>
+function payer(article){
+  alert("Tu as choisi : " + article + "\n\nRedirection vers le paiement...");
+}
+</script>
 
 </body>
 </html>
